@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Sidebar } from './sidebar';
 import Request from 'superagent';
 
 class App extends Component {
@@ -69,7 +70,10 @@ class App extends Component {
           <h1 className="App-title">Welcome!! Find Geopgraphic location using ip address</h1>
           </header>
         
-          <body>                      
+          <body>     
+            <Sidebar />                 
+            
+
             <br/>
             <input ref="textBox" type="text"></input>            
             <button onClick = { (e) => this.onClickingBtton() } > Enter </button>          
@@ -79,44 +83,7 @@ class App extends Component {
             <ul>{ this.state.city}</ul>
             <ul>{ this.state.region}</ul>
             <ul>{this.state.country}</ul>          
-
-            <table>
-              <tr>
-                <th>Company</th>
-                <th>Contact</th>
-                <th>Country</th>
-              </tr>
-              <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-              </tr>
-              <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
-              </tr>
-              <tr>
-                <td>Ernst Handel</td>
-                <td>Roland Mendel</td>
-                <td>Austria</td>
-              </tr>
-              <tr>
-                <td>Island Trading</td>
-                <td>Helen Bennett</td>
-                <td>UK</td>
-              </tr>
-              <tr>
-                <td>Laughing Bacchus Winecellars</td>
-                <td>Yoshi Tannamuri</td>
-                <td>Canada</td>
-              </tr>
-              <tr>
-                <td>Magazzini Alimentari Riuniti</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-              </tr>
-            </table>
+            
           </body>
           
         </div>
